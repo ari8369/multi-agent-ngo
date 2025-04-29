@@ -1,0 +1,72 @@
+experiment_name: "default_experiment"
+random_seed: 42
+num_runs_per_condition: 20
+
+# Inner Group Layer (Homogeneous)
+inner_group_sizes:
+  - 1
+  - 3
+  - 5
+  - 7
+  - 10
+inner_aggregation_method: "median_voting"
+
+# Outer Group Layer (Heterogeneous)
+outer_bargaining_models:
+  - "nash"
+  - "rubinstein"
+  - "ultimatum"
+  - "baron_ferejohn"
+
+# Network Settings (Outer Layer Communication)
+outer_network_topologies:
+  - "random"
+  - "small_world"
+  - "scale_free"
+
+# Task Types (Mapped to SDG Missions)
+task_types:
+  - "resource_allocation"
+  - "priority_setting"
+  - "coordination_optimization"
+  - "information_consensus"
+  - "policy_rule_selection"
+
+# Sustainable Development Goals (Full UN List)
+sdg_domains:
+  - "no_poverty"
+  - "zero_hunger"
+  - "good_health_and_well_being"
+  - "quality_education"
+  - "gender_equality"
+  - "clean_water_and_sanitation"
+  - "affordable_and_clean_energy"
+  - "decent_work_and_economic_growth"
+  - "industry_innovation_and_infrastructure"
+  - "reduced_inequalities"
+  - "sustainable_cities_and_communities"
+  - "responsible_consumption_and_production"
+  - "climate_action"
+  - "life_below_water"
+  - "life_on_land"
+  - "peace_justice_and_strong_institutions"
+  - "partnerships_for_the_goals"
+
+# Performance Metrics to Track
+performance_metrics:
+  - "efficiency"
+  - "equity"
+  - "consensus_stability"
+  - "adaptability"
+  - "speed"
+  - "communication_cost"
+  - "inner_consensus_score"
+
+# Communication Settings
+max_communication_rounds: 50
+
+# Output Settings
+save_results: true
+output_format: "csv"
+results_directory: "experiments/results/"
+log_level: "info"
